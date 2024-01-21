@@ -7,6 +7,7 @@ let btn_operator2 = document.getElementById("btn-operator2")
 btn_operator2.textContent = "Default"
 
 let guessed_answer2 = document.getElementById("guessed-answer2")
+guessed_answer2.disabled=false
 
 
 let btn_answer1 = document.getElementById("btn-answer1")
@@ -39,18 +40,24 @@ function getAnswer(){
     
     let answer = btn_answer2.value
 
+
     if( btn_operator2.textContent === "*"){
         answer = (first_Number * second_Number)
+        
     }
     if( btn_operator2.textContent === "+"){
         answer = (Number(first_Number) + Number(second_Number))
+        
     }
     if( btn_operator2.textContent === "/"){
         answer = (first_Number / second_Number)
+        
     }
     if( btn_operator2.textContent === "-"){
         answer = (first_Number - second_Number)
+        
     }
+    
     return answer
 }
 
@@ -63,8 +70,12 @@ function assignAnswer(){
         label_answer.textContent = "correct"
 
     }
-    else{
+    if(guessed_answer2.value != btn_answer2.textContent){
         label_answer.textContent = "incorrect"
+    }
+    if((guessed_answer2.value === "") || (btn_answer2.textContent === "")){
+        label_answer.textContent = ""
+        btn_answer2.textContent = "Click Clear to continue"
     }
 
     guessed_answer2.disabled=true
