@@ -13,7 +13,7 @@ let btn_answer1 = document.getElementById("btn-answer1")
 btn_answer1.textContent = "Click for right answer"
 
 let btn_answer2 = document.getElementById("btn-answer2")
-btn_answer2.textContent = "Your Answer"
+btn_answer2.textContent = "Answer"
 
 let btn_clear = document.getElementById("btn-clear")
 btn_clear.textContent = "Clear"
