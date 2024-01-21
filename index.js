@@ -64,7 +64,7 @@ function assignAnswer(){
 
     }
     else{
-        label_answer.textContent = "wrong"
+        label_answer.textContent = "incorrect"
     }
 
     guessed_answer2.disabled=true
