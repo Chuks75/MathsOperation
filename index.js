@@ -1,7 +1,7 @@
 const characters = ["+", "-", "/", "*"];
 
 let btn_operator1 = document.getElementById("btn-operator1")
-btn_operator1.textContent = "Choose Operator"
+btn_operator1.textContent = "Click here for Operator"
 
 let btn_operator2 = document.getElementById("btn-operator2")
 btn_operator2.textContent = "Default"
